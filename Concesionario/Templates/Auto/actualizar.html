@@ -1,0 +1,59 @@
+{% include "Inc/header.html" %}
+
+{% for e in empleado%}
+
+
+
+<div class="ui container">
+    <h1 style="text-align: center;">Formulario de actualizacion Auto</h1>
+
+    <form action="" method="POST" class="ui form">
+        {% csrf_token %}
+        <div class="two fields">
+            <div class="field">
+                <label for="">Cilindraje</label>
+                <input type="text" name="cilindraje" id="" value="{{ e.Cilindraje}}" required>
+            </div>
+            <div class="field">
+                <label for="">Matricula</label>
+                <input type="text" name="matricula" id="" value="{{ e.Matricula}}" required>
+            </div>
+        </div>
+
+
+
+        <div class="two fields">
+            <div class="field">
+                <label for="">Marca</label>
+                <input type="text" name="marca" id="" value="{{ e.Marca}}" required>
+            </div>
+            <div class="field">
+                <label for="">Modelo</label>
+                <input type="text" name="modelo" id="" value="{{ e.Modelo}}" required>
+            </div>
+        </div>
+
+
+        <div class="two fields">
+            <div class="field">
+                <label for="">Color</label>
+                <input type="text" name="color" id="" value="{{ e.Color}}" required>
+            </div>
+            <div class="field">
+                <label for="">Cojineria</label>
+                <input type="text" name="cojineria" id="" value="{{ e.Cojineria}}" required>
+            </div>
+        </div
+
+
+
+
+<div style="text-align: center;">
+        <button class="ui green button">Actualizar Auto</button>
+    </div>
+
+    </form>
+
+    {% endfor %}
+</div>
+

@@ -1,0 +1,57 @@
+{% include "Inc/header.html" %}
+
+
+<div class="ui container">
+    <h1 style="text-align: center;">Formulario Registro Empleado</h1>
+
+    <form action="" method="POST" class="ui form">
+        {% csrf_token %}
+        <div class="two fields">
+            
+            <div class="field">
+                <label for="">Cilindraje</label>
+                <input type="text" name="cilindraje" id="" required>
+            </div>
+
+            <div class="field">
+                <label for="">Matricula</label>
+                <input type="text" name="matricula" id="" required>
+            </div>
+        </div>
+
+
+
+        <div class="two fields">
+            <div class="field">
+                <label for="">Marca</label>
+                <input type="text" name="marca" id="" required>
+            </div>
+            <div class="field">
+                <label for="">Modelo</label>
+                <input type="text" name="modelo" id="" required>
+            </div>
+        </div>
+
+
+
+        <div class="two fields">
+            <div class="field">
+                <label for="">Color</label>
+                <input type="text" name="color" id="" required>
+            </div>
+            <div class="field">
+                <label for="">Cojineria</label>
+                <input type="text" name="cojineria" id="" required>
+            </div>
+        </div>
+
+<div style="text-align: center;">
+        <button class="ui green button">Guardar Auto</button>
+    </div>
+
+    </form>
+</div>
+
+
+
+{% include "Inc/footer.html" %}

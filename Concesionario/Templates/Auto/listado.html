@@ -1,0 +1,43 @@
+{% include "Inc/header.html" %}
+{% load static %}
+
+<div class="ui container">
+<h1 style="text-align: center;">LISTADO AUTOS</h1>
+<table  class="ui blue table">
+<thead>
+    <tr>
+    <th>Cilindraje</th>
+    <th>Matricula</th>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th>Color</th>
+    <th>Cojineria</th>
+    <th>Acciones</th>
+</tr>
+</thead>
+
+<tbody>{% for e in empleado%}
+    <tr>
+        <td>{{e.Cilindraje}}</td>
+        <td>{{e.Matricula}}</td>
+        <td>{{e.Marca}}</td>
+        <td>{{e.Modelo}}</td>
+        <td>{{e.Color}}</td>
+        <td>{{e.Cojineria}}</td>
+        <td>
+            <a href="/Auto/actualizar/{{ e.id }}"><i class="edit icon"></i></a>  
+            <a href="/Auto/borrar/{{ e.id }}"><i class="trash icon"></i></a>
+        </td>
+    </tr>
+</tbody>
+
+
+{% endfor %}
+</table>
+
+</div>
+
+
+
+
+{% include "Inc/footer.html" %}

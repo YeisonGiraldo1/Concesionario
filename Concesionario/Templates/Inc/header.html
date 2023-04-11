@@ -1,0 +1,33 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'Css/semantic.css' %}">
+        <script src="{% static 'Js/jquery-3.1.1.min.js'%}"></script>
+        <script src="{% static 'Js/semantic.js' %}"></script>
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="ui stackable menu">
+            <div class="item">
+                <img src="{% static 'Img/auto.jpg'%}">
+            </div>
+            <div class="ui dropdown item">
+                Autos <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="/Auto/listado" class="item">Listado de
+                        autos</a>
+                    <a href="/Auto/insertar" class="item">Registrar auto</a>
+                </div>
+            </div>
+        </div>
+
+
+        {% include "Inc/footer.html" %}
